@@ -3,7 +3,7 @@ import "./style.css";
 // grab elements
 const textContainers = document.querySelectorAll(".text-container");
 
-// add bottom text
+// duplicate and append text content
 textContainers.forEach((container) => {
   const span = container.querySelector("span");
   const bottomText = span.cloneNode(true);
