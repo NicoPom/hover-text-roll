@@ -67,26 +67,27 @@ ul {
 
 /* animations */
 
+.top-text,
+.bottom-text {
+  transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
+}
+
 .top-text {
   transform: translateY(0%);
   opacity: 0.7;
-  transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 .bottom-text {
   transform: translateY(0%);
   opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 a:hover .top-text {
   transform: translateY(-100%);
   opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 a:hover .bottom-text {
   transform: translateY(-100%);
   opacity: 1;
-  transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
 }
