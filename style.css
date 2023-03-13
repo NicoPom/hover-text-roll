@@ -94,7 +94,7 @@ a:hover .bottom-text {
 }
 
 /*underline*/
-a::before {
+a::after {
   content: "";
 
   height: 2px;
@@ -110,7 +110,7 @@ a::before {
   transition: width 0.3s ease-in-out, opacity 0.25s ease-in-out;
 }
 
-a:hover::before {
+a:hover::after {
   width: 100%;
   opacity: 1;
 }
