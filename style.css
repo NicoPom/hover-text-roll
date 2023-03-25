@@ -56,40 +56,34 @@ ul {
   overflow: hidden;
 }
 
-/* for the effect to work*/
-
-.top-text {
-  display: block;
-}
-
-.bottom-text {
-  position: absolute;
-}
-
-/* animations */
-
 .top-text,
-.bottom-text {
+.top-text::after {
   transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
 }
 
 .top-text {
+  display: inline-block;
   transform: translateY(0%);
   opacity: 0.7;
 }
 
-.bottom-text {
-  transform: translateY(0%);
-  opacity: 0;
+.top-text::after {
+  content: attr(data-text);
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
 }
 
 a:hover .top-text {
   transform: translateY(-100%);
-  opacity: 0;
+  opacity: 1; /* this act as a cap for the pseudo element */
 }
 
-a:hover .bottom-text {
-  transform: translateY(-100%);
+a:hover .top-text::after {
   opacity: 1;
 }
 
